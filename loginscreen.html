@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0073ff, #003d99);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 40px 30px;
+      width: 350px;
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .login-container h2 {
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+
+    .login-container label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      background: #0b2c59;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .login-container button:hover {
+      background: #0d3d80;
+    }
+
+    .login-container .social-login {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .login-container .social-login button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .login-container a {
+      color: #eee;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .login-container a:hover {
+      text-decoration: underline;
+    }
+
+    .error {
+      color: #ff6b6b;
+      font-size: 13px;
+      margin-bottom: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Your Logo</h2>
+    <h3>Login</h3>
+    
+    <form id="loginForm">
+      <label for="email">Email</label>
+      <input type="text" id="email" placeholder="username@gmail.com">
+      <p id="emailError" class="error">Please enter a valid email</p>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Password">
+      
+      <a href="#">Forgot Password?</a>
+      <br><br>
+      <button type="submit">Sign in</button>
+    </form>
+
+    <p>or continue with</p>
+    <div class="social-login">
+      <button title="Login with Google">G</button>
+      <button title="Login with GitHub">GH</button>
+      <button title="Login with Facebook">F</button>
+    </div>
+
+    <p>Don’t have an account? <a href="#">Register for free</a></p>
+  </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    const emailInput = document.getElementById('email');
+    const emailError = document.getElementById('emailError');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const emailValue = emailInput.value.trim();
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      if (!emailValue.match(emailPattern)) {
+        emailError.style.display = "block";
+      } else {
+        emailError.style.display = "none";
+        alert("Login successful!"); 
+        // Redirect to landing page
+        window.location.href = "landing.html"; 
+      }
+    });
+  </script>
+
+</body>
+</html>

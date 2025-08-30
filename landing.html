@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f7fb;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: #0b2c59;
+      color: white;
+    }
+    .navbar h1 { font-size: 22px; }
+    .navbar ul { list-style: none; display: flex; gap: 25px; }
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .navbar ul li a:hover { color: #ffcc00; }
+    .navbar img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #0073ff, #003d99);
+      color: white;
+    }
+    .hero h2 { font-size: 32px; margin-bottom: 10px; }
+    .hero p { font-size: 18px; opacity: 0.9; }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 50px;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover { transform: translateY(-8px); }
+    .card h3 { margin-bottom: 10px; color: #0b2c59; }
+    .card p { font-size: 14px; color: #555; }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #0b2c59;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <h1>MyApp</h1>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Features</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+    <img src="https://i.pravatar.cc/35" alt="User">
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h2>Welcome Back!</h2>
+    <p>Glad to see you again. Let’s explore what’s new today 🚀</p>
+  </div>
+
+  <!-- Cards -->
+  <div class="cards">
+    <div class="card">
+      <h3>📊 Analytics</h3>
+      <p>Track your progress and performance with real-time analytics.</p>
+    </div>
+    <div class="card">
+      <h3>⚡ Quick Actions</h3>
+      <p>Access important tools quickly and save time on daily tasks.</p>
+    </div>
+    <div class="card">
+      <h3>🌐 Explore</h3>
+      <p>Discover new features, connect with others, and grow together.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>© 2025 MyApp. All Rights Reserved.</p>
+  </div>
+
+</body>
+</html>
